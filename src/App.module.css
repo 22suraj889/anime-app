@@ -1,0 +1,15 @@
+.app{
+    background-color: var(--background-dark-light-color);
+    color: var(--font-dark-light-color);
+}
+.loader {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+}
+
+.dark_mode {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}

@@ -1,0 +1,67 @@
+.anime_details__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.anime_details__image {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.anime_details__image img {
+    width: 19rem;
+    height: 27rem;
+    box-shadow: 10px 10px 10px black;
+}
+
+p:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.anime_details__info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.anime_details__info,
+.anime_details__description {
+    padding: 1rem;
+}
+
+.anime_details__description p:nth-child(2) {
+    text-align: start;
+    font-size: 1.2rem;
+}
+
+.anime_details__info p,
+.anime_details__info ul,
+.anime_details__description p {
+    padding-bottom: 1rem;
+}
+
+.anime_details__banner {
+    text-align: center;
+}
+
+.anime_details__description img {
+    width: 45rem;
+    height: 25rem;
+}
+
+@media screen and (max-width: 755px) {
+    .anime_details__description img {
+        width: 27rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .anime_details__description img {
+        width: 18rem;
+        height: 10rem;
+    }
+}

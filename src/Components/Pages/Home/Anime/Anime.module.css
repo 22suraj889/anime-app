@@ -1,0 +1,41 @@
+.anime {
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 6px 18px black;
+    background-color: var(--item-dark-light-color);
+}
+
+.anime_img {
+    margin: 10px;
+}
+
+.anime_img img {
+    width: 16rem;
+    height: 20rem;
+}
+
+.anime_title h2 {
+    padding: 10px;
+}
+
+.anime_btn {
+    margin: 10px 0px 10px 0px;
+}
+
+.anime_btn,
+.anime_img,
+.anime_title {
+    text-align: center;
+}
+
+@media screen and (max-width: 812px) and (min-width: 651px) {
+    .anime {
+        width: 17rem;
+    }
+    .anime_img img {
+        width: 15rem;
+        height: 18rem;
+    }
+}

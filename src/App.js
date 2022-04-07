@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Style from "./App.module.css";
+import Home from "./Components/Pages/Home/Home";
+import Loading from "./Components/Loading/Loading";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./Components/Pages/AboutAnime/About";
+import { useState } from "react";
+import DarkMode from "./Components/DarkMode/DarkMode";
+import StyleElement from "./Components/StyleElement/StyleElement";
 
-function App() {
+function App({ data }) {
+  const [darkMode, setDarkMode] = useState(false);
+  const [animeName, setAnimeName] = useState(sessionStorage.getItem("name"));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        {data.length !== 0 ? (
+          <div className={Style["app"]}>
+            <div>
+              <StyleElement darkMode={darkMode} />
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Home data={data} setAnimeName={setAnimeName} />}
+                />
+                <Route path={animeName} element={<About data={data} />} />
+              </Routes>
+              <DarkMode darkMode={darkMode} setDarkMode={setDarkMode} />
+            </div>
+          </div>
+        ) : (
+          <div className={Style["loader"]}>
+            <Loading />
+          </div>
+        )}
+      </BrowserRouter>
+    </>
   );
 }
 

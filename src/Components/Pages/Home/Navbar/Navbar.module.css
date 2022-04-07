@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    align-items: center;
+    top: 0;
+    background-color: #434343;
+    color: white;
+    padding: 13px 0px 17px 0px;
+}
+
+@media screen and (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0px 0px 10px 0px;
+    }
+}
