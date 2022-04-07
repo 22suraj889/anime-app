@@ -1,3 +1,7 @@
+.anime_details {
+    color: var(--font-dark-light-color);
+}
+
 .anime_details__title {
     display: flex;
     flex-direction: column;
