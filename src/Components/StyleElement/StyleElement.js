@@ -21,6 +21,10 @@ const StyleElement = ({ darkMode }) => {
       "--item-dark-light-color",
       "white"
     );
+    document.documentElement.style.setProperty(
+      "--font-dark-light-color",
+      "black"
+    );
   }
 };
 export default StyleElement;
